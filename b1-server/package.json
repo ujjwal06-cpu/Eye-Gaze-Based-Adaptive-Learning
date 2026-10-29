@@ -1,0 +1,8 @@
+{
+  "name": "b1-server",
+  "version": "1.0.0",
+  "description": "Node.js ingestion server: GazePad posts 10 s windows, Team B's B1 polls GET /latest",
+  "type": "module",
+  "scripts": { "start": "node server.js", "test": "node --test test/server.test.js" },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,370 @@
+{"timestamp": "2026-10-07T09:16:18.607458+00:00", "user_id": "U01", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:18.816026+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:18.831919+00:00", "user_id": "U01", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:18.871809+00:00", "user_id": "U01", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:18.890203+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:18.900648+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.032011+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.065017+00:00", "user_id": "U02", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.069608+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.077658+00:00", "user_id": "U02", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.219234+00:00", "user_id": "U02", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.363464+00:00", "user_id": "U02", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.434746+00:00", "user_id": "U02", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.439168+00:00", "user_id": "U02", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.446919+00:00", "user_id": "U02", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.535424+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.543985+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.567023+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.687143+00:00", "user_id": "U03", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.759707+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.775002+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.811272+00:00", "user_id": "U03", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:19.943191+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.020457+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.028787+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.068994+00:00", "user_id": "U04", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.130874+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.272631+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.277643+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.310649+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.377043+00:00", "user_id": "U04", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.385303+00:00", "user_id": "U04", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.556774+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.713428+00:00", "user_id": "U05", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.742647+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.897693+00:00", "user_id": "U05", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.906083+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.974588+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:20.990581+00:00", "user_id": "U06", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.002341+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.112998+00:00", "user_id": "U06", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.131649+00:00", "user_id": "U06", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.394589+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.406923+00:00", "user_id": "U07", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.650729+00:00", "user_id": "U07", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.658747+00:00", "user_id": "U07", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.828161+00:00", "user_id": "U07", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.832869+00:00", "user_id": "U07", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.851672+00:00", "user_id": "U07", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:21.954014+00:00", "user_id": "U08", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:22.146917+00:00", "user_id": "U08", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:22.654966+00:00", "user_id": "U09", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.213284+00:00", "user_id": "U10", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.605383+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.708268+00:00", "user_id": "U10", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.727219+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.735209+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.805026+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.908935+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.917746+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.922675+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.952183+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.978873+00:00", "user_id": "U11", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:23.994250+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.066821+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.117622+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.139942+00:00", "user_id": "U11", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.144806+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.274698+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.279240+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.304868+00:00", "user_id": "U12", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.465901+00:00", "user_id": "U12", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.470557+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-07T09:16:24.478981+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.311342+00:00", "user_id": "U01", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.510940+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.525064+00:00", "user_id": "U01", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.561807+00:00", "user_id": "U01", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.577710+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.586406+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.712823+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.745660+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.750505+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.758911+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:24.902323+00:00", "user_id": "U02", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.046258+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.117182+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.121759+00:00", "user_id": "U02", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.129686+00:00", "user_id": "U02", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.207640+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.215753+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.238622+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.355894+00:00", "user_id": "U03", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.426653+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.441641+00:00", "user_id": "U03", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.477383+00:00", "user_id": "U03", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.608070+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.682594+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.690526+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.729817+00:00", "user_id": "U04", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.791742+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.935796+00:00", "user_id": "U04", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.940225+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:25.972449+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.036501+00:00", "user_id": "U04", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.044634+00:00", "user_id": "U04", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.217174+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.367862+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.396366+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.548209+00:00", "user_id": "U05", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.556700+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.731669+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.751028+00:00", "user_id": "U06", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.766942+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.882100+00:00", "user_id": "U06", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:26.901703+00:00", "user_id": "U06", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.164672+00:00", "user_id": "U06", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.177079+00:00", "user_id": "U07", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.419526+00:00", "user_id": "U07", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.427738+00:00", "user_id": "U07", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.600222+00:00", "user_id": "U07", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.605010+00:00", "user_id": "U07", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.623872+00:00", "user_id": "U07", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.722593+00:00", "user_id": "U08", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:27.919485+00:00", "user_id": "U08", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:28.416801+00:00", "user_id": "U09", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:28.943633+00:00", "user_id": "U10", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.339386+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.441990+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.460776+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.468711+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.537794+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.625227+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.633185+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.637673+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.667402+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.692718+00:00", "user_id": "U11", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.707923+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.778324+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.827559+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.850153+00:00", "user_id": "U11", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.854833+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.985447+00:00", "user_id": "U12", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:29.989824+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:30.018494+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:30.174268+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-09T03:31:30.189433+00:00", "user_id": "U12", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-09T03:31:30.198753+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:22.789868+00:00", "user_id": "U01", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:22.995187+00:00", "user_id": "U01", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.001048+00:00", "user_id": "U01", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.035349+00:00", "user_id": "U01", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.050627+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.066877+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.193534+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.227309+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.231563+00:00", "user_id": "U02", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.239824+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.381107+00:00", "user_id": "U02", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.524037+00:00", "user_id": "U02", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.595967+00:00", "user_id": "U02", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.600589+00:00", "user_id": "U02", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.608215+00:00", "user_id": "U02", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.688911+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.696615+00:00", "user_id": "U03", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.719029+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.835027+00:00", "user_id": "U03", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.907701+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.922791+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:23.959105+00:00", "user_id": "U03", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.093686+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.170327+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.178239+00:00", "user_id": "U04", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.218600+00:00", "user_id": "U04", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.278934+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.421135+00:00", "user_id": "U04", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.425422+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.458005+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.521649+00:00", "user_id": "U04", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.529777+00:00", "user_id": "U04", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.698145+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.848314+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:24.875069+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.025752+00:00", "user_id": "U05", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.033862+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.101932+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.117069+00:00", "user_id": "U06", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.128235+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.238559+00:00", "user_id": "U06", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.257116+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.519662+00:00", "user_id": "U06", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.531248+00:00", "user_id": "U07", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.774568+00:00", "user_id": "U07", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.782239+00:00", "user_id": "U07", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.950199+00:00", "user_id": "U07", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.954698+00:00", "user_id": "U07", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:25.973159+00:00", "user_id": "U07", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:26.075242+00:00", "user_id": "U08", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:26.268016+00:00", "user_id": "U08", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:26.766735+00:00", "user_id": "U09", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.298993+00:00", "user_id": "U10", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.703780+00:00", "user_id": "U10", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.805874+00:00", "user_id": "U10", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.824921+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.832847+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.901625+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.989382+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:27.997241+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.001417+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.031168+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.056200+00:00", "user_id": "U11", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.071406+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.144142+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.195316+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.217862+00:00", "user_id": "U11", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.223159+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.355842+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.360418+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.385758+00:00", "user_id": "U12", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.544894+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.549436+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:28.557162+00:00", "user_id": "U12", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.557498+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.752825+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.758071+00:00", "user_id": "U01", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.790156+00:00", "user_id": "U01", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.806572+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.814322+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.936481+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.968869+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.973110+00:00", "user_id": "U02", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:41.980974+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.125186+00:00", "user_id": "U02", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.270250+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.343120+00:00", "user_id": "U02", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.347647+00:00", "user_id": "U02", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.355794+00:00", "user_id": "U02", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.433105+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.441141+00:00", "user_id": "U03", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.462499+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.579671+00:00", "user_id": "U03", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.649963+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.664750+00:00", "user_id": "U03", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.702099+00:00", "user_id": "U03", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.834488+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.908530+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.916844+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:42.955791+00:00", "user_id": "U04", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.018524+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.159315+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.163807+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.197464+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.263316+00:00", "user_id": "U04", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.271047+00:00", "user_id": "U04", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.440418+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.593091+00:00", "user_id": "U05", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.619110+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.771808+00:00", "user_id": "U05", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.779771+00:00", "user_id": "U05", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.847454+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.862799+00:00", "user_id": "U06", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.874130+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:43.987056+00:00", "user_id": "U06", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.005734+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.269210+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.288021+00:00", "user_id": "U07", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.530076+00:00", "user_id": "U07", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.538158+00:00", "user_id": "U07", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.707223+00:00", "user_id": "U07", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.711542+00:00", "user_id": "U07", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.731184+00:00", "user_id": "U07", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:44.834358+00:00", "user_id": "U08", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:45.031893+00:00", "user_id": "U08", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:45.535292+00:00", "user_id": "U09", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.077494+00:00", "user_id": "U10", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.484502+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.587214+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.606176+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.614263+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.681932+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.771512+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.779157+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.783504+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.812140+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.839143+00:00", "user_id": "U11", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.854349+00:00", "user_id": "U11", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.928079+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:46.979275+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.000974+00:00", "user_id": "U11", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.005754+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.138354+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.142776+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.168421+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.325035+00:00", "user_id": "U12", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.329390+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T06:43:47.337054+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.597756+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.794332+00:00", "user_id": "U01", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.800226+00:00", "user_id": "U01", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.833497+00:00", "user_id": "U01", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.849776+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.858238+00:00", "user_id": "U01", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:35.981657+00:00", "user_id": "U02", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.013874+00:00", "user_id": "U02", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.018106+00:00", "user_id": "U02", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.026236+00:00", "user_id": "U02", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.164245+00:00", "user_id": "U02", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.310240+00:00", "user_id": "U02", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.383405+00:00", "user_id": "U02", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.387801+00:00", "user_id": "U02", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.395743+00:00", "user_id": "U02", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.473484+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.481708+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.503275+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.621218+00:00", "user_id": "U03", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.691013+00:00", "user_id": "U03", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.706220+00:00", "user_id": "U03", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.742589+00:00", "user_id": "U03", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.876768+00:00", "user_id": "U03", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.952229+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.960363+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:36.999824+00:00", "user_id": "U04", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.061051+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.203574+00:00", "user_id": "U04", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.208097+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.240259+00:00", "user_id": "U04", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.303170+00:00", "user_id": "U04", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.310639+00:00", "user_id": "U04", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.478407+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.630340+00:00", "user_id": "U05", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.655781+00:00", "user_id": "U05", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.805206+00:00", "user_id": "U05", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.813136+00:00", "user_id": "U05", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.880768+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.895447+00:00", "user_id": "U06", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:37.906437+00:00", "user_id": "U06", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.016987+00:00", "user_id": "U06", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.035012+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.287723+00:00", "user_id": "U06", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.306953+00:00", "user_id": "U07", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.546687+00:00", "user_id": "U07", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.554767+00:00", "user_id": "U07", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.723060+00:00", "user_id": "U07", "intent": "MEDICINE", "message": "Could you bring me my medication, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.727266+00:00", "user_id": "U07", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.745701+00:00", "user_id": "U07", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:38.847896+00:00", "user_id": "U08", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:39.039713+00:00", "user_id": "U08", "intent": "MEDICINE", "message": "I need my medicine now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:39.533199+00:00", "user_id": "U09", "intent": "GENERAL_MESSAGE", "message": "I have something to say.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.063692+00:00", "user_id": "U10", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.460889+00:00", "user_id": "U10", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.562104+00:00", "user_id": "U10", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.580791+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.588532+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.655177+00:00", "user_id": "U11", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.742975+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.750569+00:00", "user_id": "U11", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.755004+00:00", "user_id": "U11", "intent": "TOILET", "message": "I need to use the restroom.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.783832+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.809597+00:00", "user_id": "U11", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.824836+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.895369+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.946281+00:00", "user_id": "U11", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.968441+00:00", "user_id": "U11", "intent": "MEDICINE", "message": "It's time for my medicine.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:40.973234+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "There's something I'd like to tell you.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.103037+00:00", "user_id": "U12", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.107477+00:00", "user_id": "U12", "intent": "GENERAL_MESSAGE", "message": "I need to communicate something.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.132448+00:00", "user_id": "U12", "intent": "TOILET", "message": "Could you take me to the bathroom, please?", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.290485+00:00", "user_id": "U12", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.294549+00:00", "user_id": "U12", "intent": "TOILET", "message": "I need help getting to the toilet.", "spoken": true}
+{"timestamp": "2026-10-15T07:20:41.302317+00:00", "user_id": "U12", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}

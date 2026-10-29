@@ -1,0 +1,121 @@
+text,intent
+I need water,WATER
+Please give me water,WATER
+I am thirsty,WATER
+Can I have some water,WATER
+I want to drink water,WATER
+Water please,WATER
+I need a glass of water,WATER
+I'm really thirsty right now,WATER
+Could you bring me water,WATER
+Give me water please,WATER
+I would like some water,WATER
+I need something to drink,WATER
+I need food,FOOD
+I am hungry,FOOD
+Please give me food,FOOD
+I want something to eat,FOOD
+Can I have food,FOOD
+Food please,FOOD
+I'm starving,FOOD
+I would like to eat something,FOOD
+Could you bring me food,FOOD
+I need a meal,FOOD
+I want a snack,FOOD
+Give me something to eat,FOOD
+I need help,HELP
+Please help me,HELP
+Can you help me,HELP
+I need assistance,HELP
+Help please,HELP
+Someone help me,HELP
+I require assistance,HELP
+Can someone come help,HELP
+I need a hand with something,HELP
+Please assist me,HELP
+I need support right now,HELP
+Come help me please,HELP
+Please call my caregiver,CALL
+Call someone for me,CALL
+I want you to call my family,CALL
+Can you call the nurse,CALL
+Please contact my caregiver,CALL
+Call my mom,CALL
+I need you to make a call,CALL
+Please phone my caregiver,CALL
+Contact someone for me,CALL
+Call for assistance,CALL
+Can you ring my sister,CALL
+I need you to reach someone,CALL
+This is an emergency,EMERGENCY
+I need help immediately,EMERGENCY
+"Emergency, please help",EMERGENCY
+Call for emergency help now,EMERGENCY
+This is urgent,EMERGENCY
+I need urgent help,EMERGENCY
+Please help right away,EMERGENCY
+Emergency situation,EMERGENCY
+"I need help right now, it's urgent",EMERGENCY
+Something is seriously wrong,EMERGENCY
+"This can't wait, emergency",EMERGENCY
+"Get help now, please",EMERGENCY
+I need my medicine,MEDICINE
+Please give me my medication,MEDICINE
+I need my pills,MEDICINE
+Medicine please,MEDICINE
+Can I have my medication,MEDICINE
+I need my prescription,MEDICINE
+It's time for my medicine,MEDICINE
+I require my medication now,MEDICINE
+Please bring my pills,MEDICINE
+I need my dose,MEDICINE
+Can you get my medicine,MEDICINE
+"I missed my medication, I need it",MEDICINE
+I need to use the restroom,TOILET
+I need the bathroom,TOILET
+Please take me to the toilet,TOILET
+I need to use the toilet,TOILET
+Bathroom please,TOILET
+I need to go to the washroom,TOILET
+Can you help me to the restroom,TOILET
+I need to pee,TOILET
+Take me to the bathroom please,TOILET
+I need to use the loo,TOILET
+"I need to go, bathroom now",TOILET
+Can you help me get to the toilet,TOILET
+I am in pain,PAIN
+Something hurts,PAIN
+I'm in a lot of pain,PAIN
+"Please check on me, it hurts",PAIN
+I have pain,PAIN
+My body hurts,PAIN
+I'm hurting,PAIN
+I feel pain,PAIN
+This really hurts,PAIN
+I need something for the pain,PAIN
+It hurts a lot right now,PAIN
+"I'm not feeling well, it hurts",PAIN
+Can you turn on the TV,ENTERTAINMENT
+I want to watch something,ENTERTAINMENT
+Play some music please,ENTERTAINMENT
+I want entertainment,ENTERTAINMENT
+Turn on the radio,ENTERTAINMENT
+"I'm bored, play something",ENTERTAINMENT
+Can we watch a movie,ENTERTAINMENT
+Put on some music,ENTERTAINMENT
+I want to listen to music,ENTERTAINMENT
+Turn on the television please,ENTERTAINMENT
+Can you play my favorite show,ENTERTAINMENT
+I'd like some music on,ENTERTAINMENT
+I have something to say,GENERAL_MESSAGE
+I want to tell you something,GENERAL_MESSAGE
+Let me say something,GENERAL_MESSAGE
+I need to communicate something,GENERAL_MESSAGE
+I have a message,GENERAL_MESSAGE
+There's something I want to say,GENERAL_MESSAGE
+I want to talk,GENERAL_MESSAGE
+Let me express something,GENERAL_MESSAGE
+I have a general message,GENERAL_MESSAGE
+I want to say something else,GENERAL_MESSAGE
+There's something on my mind,GENERAL_MESSAGE
+I need to tell you something important,GENERAL_MESSAGE

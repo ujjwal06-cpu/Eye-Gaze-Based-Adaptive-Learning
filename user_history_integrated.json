@@ -1,0 +1,182 @@
+{
+  "U01": {
+    "user_id": "U01",
+    "counts": {
+      "WATER": 10,
+      "FOOD": 0,
+      "HELP": 5,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 0,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 10
+    }
+  },
+  "U02": {
+    "user_id": "U02",
+    "counts": {
+      "WATER": 10,
+      "FOOD": 0,
+      "HELP": 15,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 15,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "U03": {
+    "user_id": "U03",
+    "counts": {
+      "WATER": 10,
+      "FOOD": 0,
+      "HELP": 5,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 20,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "U04": {
+    "user_id": "U04",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 10,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 5,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 20
+    }
+  },
+  "U05": {
+    "user_id": "U05",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 0,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 10,
+      "TOILET": 10,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "U06": {
+    "user_id": "U06",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 5,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 0,
+      "TOILET": 10,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 10
+    }
+  },
+  "U07": {
+    "user_id": "U07",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 10,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 5,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 5
+    }
+  },
+  "U08": {
+    "user_id": "U08",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 0,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 0,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "U09": {
+    "user_id": "U09",
+    "counts": {
+      "WATER": 0,
+      "FOOD": 0,
+      "HELP": 0,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 0,
+      "TOILET": 0,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 5
+    }
+  },
+  "U10": {
+    "user_id": "U10",
+    "counts": {
+      "WATER": 5,
+      "FOOD": 0,
+      "HELP": 10,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 0,
+      "TOILET": 0,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "U11": {
+    "user_id": "U11",
+    "counts": {
+      "WATER": 30,
+      "FOOD": 0,
+      "HELP": 0,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 5,
+      "TOILET": 20,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 5
+    }
+  },
+  "U12": {
+    "user_id": "U12",
+    "counts": {
+      "WATER": 0,
+      "FOOD": 0,
+      "HELP": 15,
+      "CALL": 0,
+      "EMERGENCY": 0,
+      "MEDICINE": 0,
+      "TOILET": 10,
+      "PAIN": 0,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 10
+    }
+  }
+}

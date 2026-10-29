@@ -1,0 +1,15 @@
+{"timestamp": "2026-09-19T09:33:51.358786+00:00", "user_id": "User A", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": false}
+{"timestamp": "2026-09-19T09:33:51.359167+00:00", "user_id": "User A", "intent": "HELP", "message": "I could use some help, please.", "spoken": false}
+{"timestamp": "2026-09-19T09:33:51.359236+00:00", "user_id": "User B", "intent": "PAIN", "message": "I need help, I'm in pain.", "spoken": false}
+{"timestamp": "2026-09-19T09:37:45.956344+00:00", "user_id": "User A", "intent": "WATER", "message": "Could I have a glass of water?", "spoken": true}
+{"timestamp": "2026-09-19T09:37:45.959625+00:00", "user_id": "User A", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-09-19T09:37:45.966948+00:00", "user_id": "User B", "intent": "PAIN", "message": "I am in pain. Please check on me.", "spoken": true}
+{"timestamp": "2026-09-19T09:39:03.955245+00:00", "user_id": "User A", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-09-19T09:39:03.957899+00:00", "user_id": "User A", "intent": "HELP", "message": "Please help me right now.", "spoken": true}
+{"timestamp": "2026-09-19T09:39:03.966210+00:00", "user_id": "User B", "intent": "PAIN", "message": "I am in pain. Please check on me.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:51.977489+00:00", "user_id": "User A", "intent": "WATER", "message": "I'm thirsty, please bring me water.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:51.981646+00:00", "user_id": "User A", "intent": "HELP", "message": "I could use some help, please.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:51.987985+00:00", "user_id": "User B", "intent": "PAIN", "message": "I am in pain. Please check on me.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:57.999588+00:00", "user_id": "User A", "intent": "WATER", "message": "I need some water, please.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:58.001505+00:00", "user_id": "User A", "intent": "HELP", "message": "I need assistance. Please come here.", "spoken": true}
+{"timestamp": "2026-09-23T11:45:58.010639+00:00", "user_id": "User B", "intent": "PAIN", "message": "Something hurts, please help.", "spoken": true}

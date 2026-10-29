@@ -1,0 +1,1816 @@
+import cv2
+import mediapipe as mp
+import numpy as np
+import time
+import math
+import os
+
+
+# ============================================================
+# SETTINGS
+# ============================================================
+
+MODEL_PATH = "face_landmarker.task"
+
+CAMERA_ID = 0
+
+# User must look at an option this long to select it
+DWELL_TIME = 1.2
+
+# Time between selections
+SELECTION_COOLDOWN = 1.0
+
+# Print vectors every 0.2 seconds
+PRINT_INTERVAL = 0.2
+
+
+# ============================================================
+# CHECK MODEL
+# ============================================================
+
+if not os.path.exists(MODEL_PATH):
+
+    print("ERROR:")
+    print("face_landmarker.task was not found.")
+    print()
+    print("Make sure it is inside the Eye_gaze folder.")
+    exit()
+
+
+# ============================================================
+# MEDIAPIPE TASKS
+# ============================================================
+
+BaseOptions = mp.tasks.BaseOptions
+FaceLandmarker = mp.tasks.vision.FaceLandmarker
+FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
+VisionRunningMode = mp.tasks.vision.RunningMode
+
+
+options = FaceLandmarkerOptions(
+
+    base_options=BaseOptions(
+        model_asset_path=MODEL_PATH
+    ),
+
+    running_mode=VisionRunningMode.IMAGE,
+
+    num_faces=1,
+
+    min_face_detection_confidence=0.5,
+
+    min_face_presence_confidence=0.5,
+
+    min_tracking_confidence=0.5,
+
+    output_face_blendshapes=False,
+
+    output_facial_transformation_matrixes=False
+)
+
+
+face_landmarker = FaceLandmarker.create_from_options(options)
+
+
+# ============================================================
+# CAMERA
+# ============================================================
+
+cap = cv2.VideoCapture(CAMERA_ID)
+
+if not cap.isOpened():
+
+    print("ERROR: Could not open webcam.")
+
+    print()
+    print("On macOS:")
+    print("System Settings")
+    print("→ Privacy & Security")
+    print("→ Camera")
+    print("→ allow Terminal")
+
+    exit()
+
+
+print()
+print("==============================================")
+print("       EYE GAZE INTERFACE STARTED")
+print("==============================================")
+print()
+print("Webcam opened successfully.")
+print()
+print("Look at an option for 1.2 seconds to select it.")
+print()
+print("Press Q to quit.")
+print()
+
+
+# ============================================================
+# OPTIONS
+# ============================================================
+
+OPTIONS = [
+    "OPTION 1",
+    "OPTION 2",
+    "OPTION 3",
+    "OPTION 4",
+    "EXIT"
+]
+
+
+# ============================================================
+# HELPER FUNCTION
+# ============================================================
+
+def get_xy(landmark):
+
+    return np.array(
+        [landmark.x, landmark.y],
+        dtype=np.float32
+    )
+
+
+# ============================================================
+# GAZE ESTIMATION
+# ============================================================
+
+def calculate_gaze(landmarks):
+
+    """
+    Estimate normalized gaze position.
+
+    Returns:
+
+        gaze_x
+        gaze_y
+        eye_openness
+        blink
+    """
+
+    # --------------------------------------------------------
+    # LEFT EYE
+    # --------------------------------------------------------
+
+    left_outer = get_xy(landmarks[33])
+    left_inner = get_xy(landmarks[133])
+
+    left_top = get_xy(landmarks[159])
+    left_bottom = get_xy(landmarks[145])
+
+    left_iris = np.mean(
+        [
+            get_xy(landmarks[i])
+            for i in range(468, 473)
+        ],
+        axis=0
+    )
+
+
+    # --------------------------------------------------------
+    # RIGHT EYE
+    # --------------------------------------------------------
+
+    right_outer = get_xy(landmarks[362])
+    right_inner = get_xy(landmarks[263])
+
+    right_top = get_xy(landmarks[386])
+    right_bottom = get_xy(landmarks[374])
+
+    right_iris = np.mean(
+        [
+            get_xy(landmarks[i])
+            for i in range(473, 478)
+        ],
+        axis=0
+    )
+
+
+    # --------------------------------------------------------
+    # LEFT EYE GAZE
+    # --------------------------------------------------------
+
+    left_eye_width = np.linalg.norm(
+        left_inner - left_outer
+    )
+
+    left_eye_height = np.linalg.norm(
+        left_bottom - left_top
+    )
+
+    if left_eye_width < 0.001:
+        left_eye_width = 0.001
+
+    if left_eye_height < 0.001:
+        left_eye_height = 0.001
+
+
+    left_gaze_x = np.dot(
+        left_iris - left_outer,
+        left_inner - left_outer
+    ) / (left_eye_width ** 2)
+
+
+    left_gaze_y = (
+        left_iris[1] - left_top[1]
+    ) / left_eye_height
+
+
+    # --------------------------------------------------------
+    # RIGHT EYE GAZE
+    # --------------------------------------------------------
+
+    right_eye_width = np.linalg.norm(
+        right_inner - right_outer
+    )
+
+    right_eye_height = np.linalg.norm(
+        right_bottom - right_top
+    )
+
+    if right_eye_width < 0.001:
+        right_eye_width = 0.001
+
+    if right_eye_height < 0.001:
+        right_eye_height = 0.001
+
+
+    right_gaze_x = np.dot(
+        right_iris - right_outer,
+        right_inner - right_outer
+    ) / (right_eye_width ** 2)
+
+
+    right_gaze_y = (
+        right_iris[1] - right_top[1]
+    ) / right_eye_height
+
+
+    # --------------------------------------------------------
+    # AVERAGE EYES
+    # --------------------------------------------------------
+
+    gaze_x = (
+        left_gaze_x +
+        right_gaze_x
+    ) / 2
+
+
+    gaze_y = (
+        left_gaze_y +
+        right_gaze_y
+    ) / 2
+
+
+    # --------------------------------------------------------
+    # CLAMP
+    # --------------------------------------------------------
+
+    gaze_x = float(
+        np.clip(gaze_x, 0.0, 1.0)
+    )
+
+    gaze_y = float(
+        np.clip(gaze_y, 0.0, 1.0)
+    )
+
+
+    # --------------------------------------------------------
+    # EYE OPENNESS
+    # --------------------------------------------------------
+
+    left_open = (
+        left_eye_height /
+        left_eye_width
+    )
+
+    right_open = (
+        right_eye_height /
+        right_eye_width
+    )
+
+
+    eye_openness = (
+        left_open +
+        right_open
+    ) / 2
+
+
+    # Simple blink detector
+    blink = eye_openness < 0.16
+
+
+    return (
+        gaze_x,
+        gaze_y,
+        eye_openness,
+        blink
+    )
+
+
+# ============================================================
+# DETERMINE OPTION
+# ============================================================
+
+def get_option(gaze_x, gaze_y):
+
+    # --------------------------------------------------------
+    # TOP ROW
+    # --------------------------------------------------------
+
+    if gaze_y < 0.45:
+
+        if gaze_x < 0.5:
+
+            return "OPTION 1"
+
+        else:
+
+            return "OPTION 2"
+
+
+    # --------------------------------------------------------
+    # MIDDLE ROW
+    # --------------------------------------------------------
+
+    elif gaze_y < 0.70:
+
+        if gaze_x < 0.5:
+
+            return "OPTION 3"
+
+        else:
+
+            return "OPTION 4"
+
+
+    # --------------------------------------------------------
+    # EXIT
+    # --------------------------------------------------------
+
+    else:
+
+        if 0.30 < gaze_x < 0.70:
+
+            return "EXIT"
+
+        return None
+
+
+# ============================================================
+# DRAW INTERFACE
+# ============================================================
+
+def draw_interface(
+    frame,
+    current_option,
+    fixation_progress
+):
+
+    height, width = frame.shape[:2]
+
+
+    # --------------------------------------------------------
+    # BOXES
+    # --------------------------------------------------------
+
+    boxes = {
+
+        "OPTION 1": (
+            50,
+            50,
+            width // 2 - 10,
+            height // 3
+        ),
+
+        "OPTION 2": (
+            width // 2 + 10,
+            50,
+            width - 50,
+            height // 3
+        ),
+
+        "OPTION 3": (
+            50,
+            height // 3 + 10,
+            width // 2 - 10,
+            2 * height // 3 - 10
+        ),
+
+        "OPTION 4": (
+            width // 2 + 10,
+            height // 3 + 10,
+            width - 50,
+            2 * height // 3 - 10
+        ),
+
+        "EXIT": (
+            width // 3,
+            2 * height // 3 + 10,
+            2 * width // 3,
+            height - 40
+        )
+    }
+
+
+    # --------------------------------------------------------
+    # DRAW BOXES
+    # --------------------------------------------------------
+
+    for option, box in boxes.items():
+
+        x1, y1, x2, y2 = box
+
+
+        thickness = 2
+
+
+        if option == current_option:
+
+            thickness = 8
+
+
+        cv2.rectangle(
+
+            frame,
+
+            (x1, y1),
+
+            (x2, y2),
+
+            (255, 255, 255),
+
+            thickness
+        )
+
+
+        # ----------------------------------------------------
+        # TEXT
+        # ----------------------------------------------------
+
+        text_size = cv2.getTextSize(
+
+            option,
+
+            cv2.FONT_HERSHEY_SIMPLEX,
+
+            0.9,
+
+            2
+
+        )[0]
+
+
+        text_x = (
+            x1 +
+            (x2 - x1 - text_size[0]) // 2
+        )
+
+
+        text_y = (
+            y1 +
+            (y2 - y1 + text_size[1]) // 2
+        )
+
+
+        cv2.putText(
+
+            frame,
+
+            option,
+
+            (text_x, text_y),
+
+            cv2.FONT_HERSHEY_SIMPLEX,
+
+            0.9,
+
+            (255, 255, 255),
+
+            2
+        )
+
+
+    # --------------------------------------------------------
+    # FIXATION PROGRESS BAR
+    # --------------------------------------------------------
+
+    if current_option is not None:
+
+        bar_width = int(width * 0.6)
+
+        bar_x = (
+            width - bar_width
+        ) // 2
+
+        bar_y = height - 25
+
+
+        cv2.rectangle(
+
+            frame,
+
+            (bar_x, bar_y),
+
+            (
+                bar_x + bar_width,
+                bar_y + 12
+            ),
+
+            (80, 80, 80),
+
+            -1
+        )
+
+
+        progress_width = int(
+
+            bar_width *
+            fixation_progress
+        )
+
+
+        cv2.rectangle(
+
+            frame,
+
+            (bar_x, bar_y),
+
+            (
+                bar_x + progress_width,
+                bar_y + 12
+            ),
+
+            (0, 255, 0),
+
+            -1
+        )
+
+
+# ============================================================
+# VARIABLES
+# ============================================================
+
+current_option = None
+
+fixation_start = None
+
+last_gaze = None
+
+last_time = time.time()
+
+last_selection_time = 0
+
+last_print_time = 0
+
+
+# ============================================================
+# MAIN LOOP
+# ============================================================
+
+while True:
+
+    ret, frame = cap.read()
+
+
+    if not ret:
+
+        print("Could not read webcam.")
+
+        break
+
+
+    # Mirror webcam
+
+    frame = cv2.flip(frame, 1)
+
+
+    height, width = frame.shape[:2]
+
+
+    # --------------------------------------------------------
+    # CONVERT TO MEDIAPIPE IMAGE
+    # --------------------------------------------------------
+
+    rgb_frame = cv2.cvtColor(
+
+        frame,
+
+        cv2.COLOR_BGR2RGB
+    )
+
+
+    mp_image = mp.Image(
+
+        image_format=mp.ImageFormat.SRGB,
+
+        data=rgb_frame
+    )
+
+
+    # --------------------------------------------------------
+    # DETECT FACE
+    # --------------------------------------------------------
+
+    result = face_landmarker.detect(
+        mp_image
+    )
+
+
+    # --------------------------------------------------------
+    # DEFAULT VALUES
+    # --------------------------------------------------------
+
+    gaze_x = None
+    gaze_y = None
+
+    eye_openness = None
+
+    blink = False
+
+    face_detected = False
+
+    fixation_duration = 0.0
+
+    gaze_velocity = 0.0
+
+    confidence = 0.0
+
+
+    # --------------------------------------------------------
+    # FACE FOUND
+    # --------------------------------------------------------
+
+    if len(result.face_landmarks) > 0:
+
+        face_detected = True
+
+
+        landmarks = result.face_landmarks[0]
+
+
+        (
+            gaze_x,
+            gaze_y,
+            eye_openness,
+            blink
+        ) = calculate_gaze(landmarks)
+
+
+        now = time.time()
+
+
+        # ----------------------------------------------------
+        # GAZE VELOCITY
+        # ----------------------------------------------------
+
+        if last_gaze is not None:
+
+            dx = (
+                gaze_x -
+                last_gaze[0]
+            )
+
+            dy = (
+                gaze_y -
+                last_gaze[1]
+            )
+
+
+            distance = math.sqrt(
+
+                dx * dx +
+                dy * dy
+            )
+
+
+            dt = now - last_time
+
+
+            if dt > 0:
+
+                gaze_velocity = (
+                    distance / dt
+                )
+
+
+        last_gaze = (
+            gaze_x,
+            gaze_y
+        )
+
+        last_time = now
+
+
+        # ----------------------------------------------------
+        # BLINK
+        # ----------------------------------------------------
+
+        if not blink:
+
+            detected_option = get_option(
+
+                gaze_x,
+                gaze_y
+            )
+
+
+            # ------------------------------------------------
+            # NEW OPTION
+            # ------------------------------------------------
+
+            if detected_option != current_option:
+
+                current_option = (
+                    detected_option
+                )
+
+
+                if detected_option is not None:
+
+                    fixation_start = now
+
+                else:
+
+                    fixation_start = None
+
+
+            # ------------------------------------------------
+            # CONTINUING FIXATION
+            # ------------------------------------------------
+
+            elif current_option is not None:
+
+                if fixation_start is not None:
+
+                    fixation_duration = (
+
+                        now -
+                        fixation_start
+                    )
+
+
+            # ------------------------------------------------
+            # CONFIDENCE
+            # ------------------------------------------------
+
+            stability = max(
+
+                0.0,
+
+                1.0 -
+                min(gaze_velocity, 1.0)
+            )
+
+
+            fixation_confidence = min(
+
+                fixation_duration /
+                DWELL_TIME,
+
+                1.0
+            )
+
+
+            confidence = (
+
+                0.5 * stability +
+                0.5 * fixation_confidence
+            )
+
+
+            # ------------------------------------------------
+            # SELECTION
+            # ------------------------------------------------
+
+            if (
+
+                current_option is not None
+
+                and fixation_start is not None
+
+                and fixation_duration >= DWELL_TIME
+
+                and now -
+                last_selection_time
+                > SELECTION_COOLDOWN
+
+            ):
+
+                selected_option = (
+                    current_option
+                )
+
+
+                last_selection_time = now
+
+
+                print()
+                print(
+                    "======================================"
+                )
+                print(
+                    "       SELECTION DETECTED"
+                )
+                print(
+                    "======================================"
+                )
+
+
+                print(
+                    f"Option          : "
+                    f"{selected_option}"
+                )
+
+
+                print(
+                    f"Gaze X          : "
+                    f"{gaze_x:.3f}"
+                )
+
+
+                print(
+                    f"Gaze Y          : "
+                    f"{gaze_y:.3f}"
+                )
+
+
+                print(
+                    f"Confidence      : "
+                    f"{confidence:.3f}"
+                )
+
+
+                print(
+                    f"Blink           : "
+                    f"{blink}"
+                )
+
+
+                print(
+                    f"Fixation        : "
+                    f"{fixation_duration:.3f} sec"
+                )
+
+
+                print(
+                    f"Gaze velocity   : "
+                    f"{gaze_velocity:.3f}"
+                )
+
+
+                print(
+                    f"Eye openness    : "
+                    f"{eye_openness:.3f}"
+                )
+
+
+                print(
+                    "======================================"
+                )
+
+
+                # EXIT
+
+                if selected_option == "EXIT":
+
+                    break
+
+
+                # Reset fixation
+
+                fixation_start = now
+
+
+        else:
+
+            confidence = 0.0
+
+
+    # ========================================================
+    # FIXATION PROGRESS
+    # ========================================================
+
+    if fixation_start is not None:
+
+        fixation_duration = (
+
+            time.time() -
+            fixation_start
+        )
+
+
+        fixation_progress = min(
+
+            fixation_duration /
+            DWELL_TIME,
+
+            1.0
+        )
+
+    else:
+
+        fixation_progress = 0.0
+
+
+    # ========================================================
+    # DRAW GAZE POINT
+    # ========================================================
+
+    if gaze_x is not None:
+
+        gaze_px = int(
+            gaze_x * width
+        )
+
+        gaze_py = int(
+            gaze_y * height
+        )
+
+
+        cv2.circle(
+
+            frame,
+
+            (gaze_px, gaze_py),
+
+            12,
+
+            (0, 255, 0),
+
+            -1
+        )
+
+
+    # ========================================================
+    # DRAW UI
+    # ========================================================
+
+    draw_interface(
+
+        frame,
+
+        current_option,
+
+        fixation_progress
+    )
+
+
+    # ========================================================
+    # STATUS
+    # ========================================================
+
+    if not face_detected:
+
+        status = "NO FACE DETECTED"
+
+    elif blink:
+
+        status = "BLINK"
+
+    else:
+
+        status = (
+            f"LOOKING: "
+            f"{current_option}"
+        )
+
+
+    cv2.putText(
+
+        frame,
+
+        status,
+
+        (20, 30),
+
+        cv2.FONT_HERSHEY_SIMPLEX,
+
+        0.65,
+
+        (255, 255, 255),
+
+        2
+    )
+
+
+    # ========================================================
+    # PRINT VECTOR
+    # ========================================================
+
+    now = time.time()
+
+
+    if now - last_print_time >= PRINT_INTERVAL:
+
+        vector = [
+
+            None if gaze_x is None
+            else round(gaze_x, 3),
+
+            None if gaze_y is None
+            else round(gaze_y, 3),
+
+            current_option,
+
+            round(confidence, 3),
+
+            bool(blink),
+
+            round(fixation_duration, 3),
+
+            round(gaze_velocity, 3),
+
+            None if eye_openness is None
+            else round(
+                float(eye_openness),
+                3
+            ),
+
+            face_detected
+        ]
+
+
+        print(
+            "VECTOR:",
+            vector
+        )
+
+
+        last_print_time = now
+
+
+    # ========================================================
+    # SHOW WINDOW
+    # ========================================================
+
+    cv2.imshow(
+
+        "Eye Gaze Interface",
+
+        frame
+    )
+
+
+    # ========================================================
+    # QUIT
+    # ========================================================
+
+    key = cv2.waitKey(1) & 0xFF
+
+
+    if key == ord("q"):
+
+        break
+
+
+# ============================================================
+# CLEANUP
+# ============================================================
+
+cap.release()
+
+cv2.destroyAllWindows()
+
+face_landmarker.close()
+
+
+print()
+
+import numpy as np
+import time
+import math
+
+# ============================================================
+# SETTINGS
+# ============================================================
+
+CAMERA_ID = 0
+
+# How long the user must look at an option
+DWELL_TIME = 1.2
+
+# Ignore selections immediately after one has been made
+SELECTION_COOLDOWN = 1.0
+
+# Maximum gaze movement allowed during fixation
+FIXATION_THRESHOLD = 0.035
+
+# Print output approximately every 0.2 seconds
+PRINT_INTERVAL = 0.2
+
+
+# ============================================================
+# MEDIAPIPE
+# ============================================================
+
+mp_face_mesh = mp.solutions.face_mesh
+
+face_mesh = mp_face_mesh.FaceMesh(
+    max_num_faces=1,
+    refine_landmarks=True,
+    min_detection_confidence=0.5,
+    min_tracking_confidence=0.5
+)
+
+
+# ============================================================
+# CAMERA
+# ============================================================
+
+cap = cv2.VideoCapture(CAMERA_ID)
+
+if not cap.isOpened():
+    print("ERROR: Could not open webcam.")
+    exit()
+
+
+# ============================================================
+# GRID
+# ============================================================
+
+OPTIONS = [
+    "OPTION 1",
+    "OPTION 2",
+    "OPTION 3",
+    "OPTION 4",
+    "EXIT"
+]
+
+
+# ============================================================
+# GAZE / EYE LANDMARK FUNCTIONS
+# ============================================================
+
+def landmark_xy(landmarks, index, width, height):
+    """Convert MediaPipe landmark to pixel coordinates."""
+
+    x = int(landmarks[index].x * width)
+    y = int(landmarks[index].y * height)
+
+    return np.array([x, y], dtype=np.float32)
+
+
+def calculate_gaze(landmarks, width, height):
+    """
+    Estimate gaze using iris position relative to eye boundaries.
+
+    Returns:
+        gaze_x : 0 -> 1
+        gaze_y : 0 -> 1
+        eye_openness
+        blink
+    """
+
+    # --------------------------------------------------------
+    # LEFT EYE
+    # --------------------------------------------------------
+
+    left_outer = landmark_xy(landmarks, 33, width, height)
+    left_inner = landmark_xy(landmarks, 133, width, height)
+
+    left_top = landmark_xy(landmarks, 159, width, height)
+    left_bottom = landmark_xy(landmarks, 145, width, height)
+
+    left_iris_points = [
+        landmark_xy(landmarks, i, width, height)
+        for i in range(468, 473)
+    ]
+
+    left_iris = np.mean(left_iris_points, axis=0)
+
+
+    # --------------------------------------------------------
+    # RIGHT EYE
+    # --------------------------------------------------------
+
+    right_outer = landmark_xy(landmarks, 362, width, height)
+    right_inner = landmark_xy(landmarks, 263, width, height)
+
+    right_top = landmark_xy(landmarks, 386, width, height)
+    right_bottom = landmark_xy(landmarks, 374, width, height)
+
+    right_iris_points = [
+        landmark_xy(landmarks, i, width, height)
+        for i in range(473, 478)
+    ]
+
+    right_iris = np.mean(right_iris_points, axis=0)
+
+
+    # --------------------------------------------------------
+    # NORMALIZED IRIS POSITION
+    # --------------------------------------------------------
+
+    # LEFT EYE
+
+    left_width = np.linalg.norm(left_inner - left_outer)
+
+    left_height = np.linalg.norm(left_bottom - left_top)
+
+    if left_width < 1:
+        left_width = 1
+
+    if left_height < 1:
+        left_height = 1
+
+    left_gaze_x = np.dot(
+        left_iris - left_outer,
+        left_inner - left_outer
+    ) / (left_width ** 2)
+
+    left_gaze_y = (
+        (left_iris[1] - left_top[1])
+        / left_height
+    )
+
+
+    # RIGHT EYE
+
+    right_width = np.linalg.norm(right_inner - right_outer)
+
+    right_height = np.linalg.norm(right_bottom - right_top)
+
+    if right_width < 1:
+        right_width = 1
+
+    if right_height < 1:
+        right_height = 1
+
+    right_gaze_x = np.dot(
+        right_iris - right_outer,
+        right_inner - right_outer
+    ) / (right_width ** 2)
+
+    right_gaze_y = (
+        (right_iris[1] - right_top[1])
+        / right_height
+    )
+
+
+    # --------------------------------------------------------
+    # AVERAGE BOTH EYES
+    # --------------------------------------------------------
+
+    gaze_x = (left_gaze_x + right_gaze_x) / 2
+    gaze_y = (left_gaze_y + right_gaze_y) / 2
+
+
+    # --------------------------------------------------------
+    # CLAMP
+    # --------------------------------------------------------
+
+    gaze_x = float(np.clip(gaze_x, 0.0, 1.0))
+    gaze_y = float(np.clip(gaze_y, 0.0, 1.0))
+
+
+    # --------------------------------------------------------
+    # EYE OPENNESS
+    # --------------------------------------------------------
+
+    left_open = left_height / left_width
+    right_open = right_height / right_width
+
+    eye_openness = (left_open + right_open) / 2
+
+    # Simple blink threshold
+    blink = eye_openness < 0.16
+
+
+    return gaze_x, gaze_y, eye_openness, blink
+
+
+# ============================================================
+# DETERMINE WHICH OPTION USER IS LOOKING AT
+# ============================================================
+
+def get_option(gaze_x, gaze_y):
+
+    # -----------------------------------------
+    # 2 x 2 grid
+    # -----------------------------------------
+
+    if gaze_y < 0.48:
+
+        if gaze_x < 0.5:
+            return "OPTION 1"
+
+        else:
+            return "OPTION 2"
+
+    # -----------------------------------------
+    # Bottom row
+    # -----------------------------------------
+
+    elif gaze_y < 0.80:
+
+        if gaze_x < 0.5:
+            return "OPTION 3"
+
+        else:
+            return "OPTION 4"
+
+    # -----------------------------------------
+    # EXIT
+    # -----------------------------------------
+
+    else:
+
+        if 0.30 < gaze_x < 0.70:
+            return "EXIT"
+
+        return None
+
+
+# ============================================================
+# DRAW GRID
+# ============================================================
+
+def draw_grid(frame, selected_option, fixation_progress):
+
+    h, w = frame.shape[:2]
+
+    # Grid boundaries
+
+    x1 = int(w * 0.05)
+    x2 = int(w * 0.50)
+    x3 = int(w * 0.95)
+
+    y1 = int(h * 0.05)
+    y2 = int(h * 0.30)
+    y3 = int(h * 0.55)
+    y4 = int(h * 0.80)
+    y5 = int(h * 0.95)
+
+
+    boxes = {
+        "OPTION 1": (x1, y1, x2, y2),
+        "OPTION 2": (x2, y1, x3, y2),
+        "OPTION 3": (x1, y2, x2, y3),
+        "OPTION 4": (x2, y2, x3, y3),
+        "EXIT": (
+            int(w * 0.30),
+            y3,
+            int(w * 0.70),
+            y5
+        )
+    }
+
+
+    for option, box in boxes.items():
+
+        xa, ya, xb, yb = box
+
+        thickness = 3
+
+        if option == selected_option:
+            thickness = 8
+
+        cv2.rectangle(
+            frame,
+            (xa, ya),
+            (xb, yb),
+            (255, 255, 255),
+            thickness
+        )
+
+        # Text
+
+        text_size = cv2.getTextSize(
+            option,
+            cv2.FONT_HERSHEY_SIMPLEX,
+            1,
+            2
+        )[0]
+
+        text_x = int(
+            (xa + xb - text_size[0]) / 2
+        )
+
+        text_y = int(
+            (ya + yb + text_size[1]) / 2
+        )
+
+        cv2.putText(
+            frame,
+            option,
+            (text_x, text_y),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            1,
+            (255, 255, 255),
+            2
+        )
+
+
+    # -----------------------------------------
+    # Fixation progress
+    # -----------------------------------------
+
+    if selected_option is not None:
+
+        bar_width = int(w * 0.6)
+
+        bar_x = int((w - bar_width) / 2)
+
+        bar_y = int(h * 0.97)
+
+        progress = int(
+            bar_width * fixation_progress
+        )
+
+        cv2.rectangle(
+            frame,
+            (bar_x, bar_y),
+            (bar_x + bar_width, bar_y + 15),
+            (100, 100, 100),
+            -1
+        )
+
+        cv2.rectangle(
+            frame,
+            (bar_x, bar_y),
+            (bar_x + progress, bar_y + 15),
+            (255, 255, 255),
+            -1
+        )
+
+
+# ============================================================
+# MAIN LOOP
+# ============================================================
+
+current_option = None
+fixation_start = None
+last_gaze = None
+last_time = time.time()
+
+last_selection_time = 0
+last_print_time = 0
+
+selection_count = 0
+
+
+while True:
+
+    ret, frame = cap.read()
+
+    if not ret:
+        print("ERROR: Could not read webcam.")
+        break
+
+
+    # Mirror webcam
+    frame = cv2.flip(frame, 1)
+
+    height, width = frame.shape[:2]
+
+
+    # --------------------------------------------------------
+    # MEDIAPIPE
+    # --------------------------------------------------------
+
+    rgb = cv2.cvtColor(
+        frame,
+        cv2.COLOR_BGR2RGB
+    )
+
+    results = face_mesh.process(rgb)
+
+
+    # Default values
+
+    gaze_x = None
+    gaze_y = None
+
+    eye_openness = None
+
+    blink = False
+
+    face_detected = False
+
+    selected_option = None
+
+    confidence = 0.0
+
+    fixation_duration = 0.0
+
+    gaze_velocity = 0.0
+
+
+    # --------------------------------------------------------
+    # FACE DETECTED
+    # --------------------------------------------------------
+
+    if results.multi_face_landmarks:
+
+        face_detected = True
+
+        landmarks = results.multi_face_landmarks[0].landmark
+
+
+        gaze_x, gaze_y, eye_openness, blink = calculate_gaze(
+            landmarks,
+            width,
+            height
+        )
+
+
+        current_time = time.time()
+
+
+        # ----------------------------------------------------
+        # GAZE VELOCITY
+        # ----------------------------------------------------
+
+        if last_gaze is not None:
+
+            dx = gaze_x - last_gaze[0]
+            dy = gaze_y - last_gaze[1]
+
+            distance = math.sqrt(
+                dx * dx + dy * dy
+            )
+
+            dt = current_time - last_time
+
+            if dt > 0:
+                gaze_velocity = distance / dt
+
+
+        last_gaze = (gaze_x, gaze_y)
+
+        last_time = current_time
+
+
+        # ----------------------------------------------------
+        # IGNORE GAZE DURING BLINK
+        # ----------------------------------------------------
+
+        if not blink:
+
+            detected_option = get_option(
+                gaze_x,
+                gaze_y
+            )
+
+
+            # ------------------------------------------------
+            # FIXATION START
+            # ------------------------------------------------
+
+            if detected_option != current_option:
+
+                current_option = detected_option
+
+                if detected_option is not None:
+                    fixation_start = current_time
+
+                else:
+                    fixation_start = None
+
+
+            # ------------------------------------------------
+            # FIXATION CONTINUING
+            # ------------------------------------------------
+
+            elif current_option is not None:
+
+                if fixation_start is not None:
+
+                    fixation_duration = (
+                        current_time -
+                        fixation_start
+                    )
+
+
+            # ------------------------------------------------
+            # SELECTION
+            # ------------------------------------------------
+
+            if (
+                current_option is not None
+                and fixation_start is not None
+                and fixation_duration >= DWELL_TIME
+                and current_time - last_selection_time
+                    > SELECTION_COOLDOWN
+            ):
+
+                selected_option = current_option
+
+                selection_count += 1
+
+                last_selection_time = current_time
+
+                print(
+                    "\n"
+                    "===================================="
+                )
+
+                print(
+                    "SELECTION DETECTED"
+                )
+
+                print(
+                    f"Option          : {selected_option}"
+                )
+
+                print(
+                    f"Gaze X          : {gaze_x:.3f}"
+                )
+
+                print(
+                    f"Gaze Y          : {gaze_y:.3f}"
+                )
+
+                print(
+                    f"Confidence      : {confidence:.3f}"
+                )
+
+                print(
+                    f"Fixation        : "
+                    f"{fixation_duration:.2f} sec"
+                )
+
+                print(
+                    f"Blink           : {blink}"
+                )
+
+                print(
+                    f"Eye openness    : "
+                    f"{eye_openness:.3f}"
+                )
+
+                print(
+                    f"Gaze velocity   : "
+                    f"{gaze_velocity:.3f}"
+                )
+
+                print(
+                    "===================================="
+                )
+
+
+                # Exit
+
+                if selected_option == "EXIT":
+                    break
+
+
+                # Reset fixation
+
+                fixation_start = current_time
+
+
+        # ----------------------------------------------------
+        # CONFIDENCE SCORE
+        # ----------------------------------------------------
+
+        if not blink:
+
+            # Stability component
+
+            stability = max(
+                0.0,
+                1.0 - gaze_velocity / 1.0
+            )
+
+            # Fixation component
+
+            fixation_confidence = min(
+                fixation_duration / DWELL_TIME,
+                1.0
+            )
+
+            # Face confidence is binary in this simple version
+
+            confidence = (
+                0.5 * stability +
+                0.5 * fixation_confidence
+            )
+
+        else:
+
+            confidence = 0.0
+
+
+    # --------------------------------------------------------
+    # DRAW GAZE POINT
+    # --------------------------------------------------------
+
+    if gaze_x is not None:
+
+        gaze_px = int(gaze_x * width)
+        gaze_py = int(gaze_y * height)
+
+        cv2.circle(
+            frame,
+            (gaze_px, gaze_py),
+            12,
+            (0, 255, 0),
+            -1
+        )
+
+
+    # --------------------------------------------------------
+    # FIXATION PROGRESS
+    # --------------------------------------------------------
+
+    if fixation_start is not None:
+
+        fixation_progress = min(
+            fixation_duration / DWELL_TIME,
+            1.0
+        )
+
+    else:
+
+        fixation_progress = 0.0
+
+
+    draw_grid(
+        frame,
+        current_option,
+        fixation_progress
+    )
+
+
+    # --------------------------------------------------------
+    # STATUS TEXT
+    # --------------------------------------------------------
+
+    status = "NO FACE"
+
+    if face_detected:
+
+        if blink:
+            status = "BLINK"
+        else:
+            status = f"LOOKING: {current_option}"
+
+
+    cv2.putText(
+        frame,
+        status,
+        (20, 30),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.7,
+        (255, 255, 255),
+        2
+    )
+
+
+    # --------------------------------------------------------
+    # PRINT VECTOR
+    # --------------------------------------------------------
+
+    now = time.time()
+
+    if now - last_print_time >= PRINT_INTERVAL:
+
+        vector = [
+            None if gaze_x is None else round(gaze_x, 3),
+            None if gaze_y is None else round(gaze_y, 3),
+            current_option,
+            round(confidence, 3),
+            bool(blink),
+            round(fixation_duration, 3),
+            round(gaze_velocity, 3),
+            None if eye_openness is None
+            else round(float(eye_openness), 3),
+            face_detected
+        ]
+
+        print(
+            "VECTOR:",
+            vector
+        )
+
+        last_print_time = now
+
+
+    # --------------------------------------------------------
+    # DISPLAY
+    # --------------------------------------------------------
+
+    cv2.imshow(
+        "Eye Gaze Interface",
+        frame
+    )
+
+
+    # Press Q to quit
+
+    key = cv2.waitKey(1) & 0xFF
+
+    if key == ord("q"):
+        break
+
+
+# ============================================================
+# CLEANUP
+# ============================================================
+
+cap.release()
+cv2.destroyAllWindows()
+face_mesh.close()
+
+print("\nProgram terminated.")

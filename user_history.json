@@ -1,0 +1,32 @@
+{
+  "User A": {
+    "user_id": "User A",
+    "counts": {
+      "WATER": 54,
+      "FOOD": 24,
+      "HELP": 14,
+      "CALL": 16,
+      "EMERGENCY": 0,
+      "MEDICINE": 0,
+      "TOILET": 6,
+      "PAIN": 0,
+      "ENTERTAINMENT": 2,
+      "GENERAL_MESSAGE": 0
+    }
+  },
+  "User B": {
+    "user_id": "User B",
+    "counts": {
+      "WATER": 0,
+      "FOOD": 0,
+      "HELP": 18,
+      "CALL": 0,
+      "EMERGENCY": 4,
+      "MEDICINE": 20,
+      "TOILET": 0,
+      "PAIN": 34,
+      "ENTERTAINMENT": 0,
+      "GENERAL_MESSAGE": 0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+model,accuracy,precision_macro,recall_macro,f1_macro
+Naive Bayes,0.7583,0.7832,0.7583,0.7518
+Logistic Regression,0.7750,0.7815,0.7750,0.7698
+SVM (linear),0.7833,0.7890,0.7833,0.7828
+Random Forest,0.6500,0.6562,0.6500,0.6486

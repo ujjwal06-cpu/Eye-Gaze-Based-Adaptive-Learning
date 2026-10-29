@@ -1,0 +1,25 @@
+{
+  "name": "gaze-pad",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "copy-webgazer": "node scripts/copy-webgazer.mjs",
+    "predev": "npm run copy-webgazer",
+    "dev": "vite",
+    "prebuild": "npm run copy-webgazer",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test src/gazeLogic.test.js"
+  },
+  "dependencies": {
+    "@mediapipe/face_mesh": "^0.4.1633559619",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webgazer": "^3.5.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

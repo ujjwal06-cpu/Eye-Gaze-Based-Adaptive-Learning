@@ -1,0 +1,61 @@
+{
+  "per_patient": {
+    "1": {
+      "n_test": 43,
+      "model_top1": 0.9069767441860465,
+      "model_top3": 1.0,
+      "prior_top1": 0.9302325581395349,
+      "prior_top3": 0.9767441860465116
+    },
+    "2": {
+      "n_test": 84,
+      "model_top1": 0.8928571428571429,
+      "model_top3": 0.9523809523809523,
+      "prior_top1": 0.9047619047619048,
+      "prior_top3": 0.9404761904761905
+    },
+    "3": {
+      "n_test": 94,
+      "model_top1": 0.9148936170212766,
+      "model_top3": 0.9468085106382979,
+      "prior_top1": 0.925531914893617,
+      "prior_top3": 0.9468085106382979
+    }
+  },
+  "cutoff": "2026-09-15",
+  "overall": {
+    "model": {
+      "n": 221,
+      "top1": 0.9049773755656109,
+      "top3": 0.9592760180995475
+    },
+    "prior": {
+      "n": 221,
+      "top1": 0.918552036199095,
+      "top3": 0.9502262443438914
+    },
+    "global": {
+      "n": 221,
+      "top1": 0.8914027149321267,
+      "top3": 0.9502262443438914
+    }
+  },
+  "confusion": {
+    "train_J": 1.0,
+    "train": {
+      "threshold": 0.8585,
+      "confused_windows": 112,
+      "calm_windows": 9600,
+      "recall_confused": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "test": {
+      "threshold": 0.8585,
+      "confused_windows": 32,
+      "calm_windows": 3208,
+      "recall_confused": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "test_false_alarm_on_request_points": 0.0
+  }
+}

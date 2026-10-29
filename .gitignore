@@ -1,0 +1,23 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+gaze-pad/public/webgazer.js
+gaze-pad/public/mediapipe/
+
+# Databases and runtime data
+*.db
+*.db-wal
+*.db-shm
+b1-server/data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
